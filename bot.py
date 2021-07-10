@@ -12,7 +12,7 @@ search_term_public = "dead chat"
 
 def tenor():
     global url
-    # set the apikey 
+    # set the tenor apikey 
     apikey = (os.getenv("TENORAPIKEY"))
 
     # our test search
@@ -37,7 +37,7 @@ def tenor():
     return url
 @client.event
 async def on_ready():
-        await client.change_presence(status = discord.Status.online, activity = discord.Game('Injecting the White House Computer with a ZIP Bomb B)'))
+        await client.change_presence(status = discord.Status.online, activity = discord.Game('A Game!'))
         print("Bot has successfully logged in as {0.user}".format(client))
 
 @client.event
@@ -62,6 +62,5 @@ async def on_message(message):
                 await message.channel.send(url)
 
 
-
-
-client.run('ODMxMzQ3Njk3ODIyODU5MjY0.YHT64A.ZzliQj0mJTrV_CBj1yHRl1IPFD4')
+# YOUR DISCORD BOT'S TOKEN
+client.run('TOKEN')
