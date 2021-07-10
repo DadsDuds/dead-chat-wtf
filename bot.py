@@ -35,6 +35,7 @@ def tenor():
     else:
             top_8gifs = None
     return url
+
 @client.event
 async def on_ready():
         await client.change_presence(status = discord.Status.online, activity = discord.Game('A Game!'))
