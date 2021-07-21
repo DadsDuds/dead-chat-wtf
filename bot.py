@@ -8,7 +8,7 @@ client = discord.Client()
 
 global search_term_public 
 global url
-search_term_public = "dead chat"
+search_term_public = "your term here"
 
 def tenor():
     global url
@@ -46,7 +46,7 @@ async def on_message(message):
         global search_term_public
         if message.author == client:
                 return
-        if message.content.startswith("!deadchat"):
+        if message.content.startswith("!yourcommandhere"):
                 # put the search term into the public variable. split the content with space and the second or more than second word should be in a variable
                 tokens = message.content.split(' ')
                 if tokens.__contains__(""):
@@ -58,7 +58,7 @@ async def on_message(message):
                         tokens.remove("!deadchat")     
                 search_term_public =  ("".join(tokens))
                 if search_term_public == "":
-                        search_term_public = "dead chat"     
+                        search_term_public = "your term here"     
                 url = tenor()
                 await message.channel.send(url)
 
