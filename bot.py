@@ -46,16 +46,16 @@ async def on_message(message):
         global search_term_public
         if message.author == client:
                 return
-        if message.content.startswith("!yourcommandhere"):
+        if message.content.startswith("!yourtermhere"):
                 # put the search term into the public variable. split the content with space and the second or more than second word should be in a variable
                 tokens = message.content.split(' ')
                 if tokens.__contains__(""):
-                        tokens.remove("!deadchat")
+                        tokens.remove("!yourtermhere")
                         tokens.remove("")
                 elif tokens.__contains__("#"):
                         token = token.replace("#", "%23")
                 else :
-                        tokens.remove("!deadchat")     
+                        tokens.remove("!yourtermhere")     
                 search_term_public =  ("".join(tokens))
                 if search_term_public == "":
                         search_term_public = "your term here"     
